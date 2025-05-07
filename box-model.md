@@ -259,3 +259,11 @@ The defaults can be overridden with
     }
 
 This is often the first CSS rule in an external stylesheet.
+
+### Visibility
+
+3 options:
+
+- hidden -- hide the element
+- visible -- display the element
+- collapse -- collapse the element
