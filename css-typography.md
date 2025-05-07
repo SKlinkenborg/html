@@ -118,3 +118,27 @@ common file formats:
 - WOFF2
 
 It’s a good idea to include TTF, WOFF, and WOFF2 formats with your @font-face rule to ensure compatibility on all browsers.
+
+[mdn web-fonts docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts#generating_the_required_code)
+
+    @font-face {
+    font-family: 'MyParagraphFont';
+    src: url('fonts/Roboto.woff2') format('woff2'),
+        url('fonts/Roboto.woff') format('woff'),
+        url('fonts/Roboto.ttf') format('truetype');
+    }
+
+Best practice to define @font-face at top of CSS stylesheet.
+
+Within delcaration block 'font-family' sets custom name for the font. src property points to each font file + its filetype.
+
+Browser will try fonts in order listed.
+
+[CSS-TRICKS How to use @font-face in CSS: font prioritization](https://css-tricks.com/snippets/css/using-font-face-in-css/)
+
+Font used as normal after that.
+
+    p {
+    font-family: 'MyParagraphFont', sans-serif;
+    }
+

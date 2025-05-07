@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'MyParagraphFont';
-    src: url('../fonts/SpaceMono-Bold.ttf') format('ttf'),
-         url('../fonts/SpaceMono-Regular.ttf') format('ttf'),
-         url('fonts/Roboto.ttf') format('truetype');
-  }
+  font-family: 'GlegooBanner';
+  src: url('fonts/Glegoo-Regular.woff2') format('woff2'),
+    url('fonts/Glegoo-Regular.woff') format('woff'),
+    url('fonts/Glegoo-Regular.ttf') format('truetype');
+}
   
 /* Universal Styles */
 html {
