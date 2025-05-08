@@ -14,7 +14,7 @@ The CSS box model is a fundamental concept in web design that describes how HTML
 
 ![Box Model Diagram](./diagram-boxmodel_Updated_1-01-1.svg)
 
-### Height and Width
+## Height and Width
 
 By default set to hold raw contents of box
 
@@ -23,7 +23,7 @@ By default set to hold raw contents of box
     width: 240px;
     }
 
-### Borders
+## Borders
 
 [CC Borders Cheatsheet](https://www.codecademy.com/resources/docs/css/borders)
 
@@ -37,7 +37,7 @@ Properties:
 - color
   - see [css-colors.md](./css-colors.md)
   
-#### Border Examples:
+### Border Examples:
 
     p {
     border: 3px solid coral;
@@ -72,7 +72,7 @@ You can create a border that is a perfect circle by first creating an element wi
 
 The code in the example above creates a \<div\> that is a perfect circle.
 
-### Padding
+## Padding
 
 Space between content and borders of box.
 
@@ -101,7 +101,7 @@ ie
     padding-left: 30px;
     }
 
-#### Padding Shorthand
+### Padding Shorthand
 
 You can specify these properties in a few different ways:
 4 Values
@@ -126,7 +126,7 @@ If the left and right sides of the content can be equal, the padding shorthand p
 
 And finally, if the top and bottom sides can be equal, and the left and right sides can be equal, you can specify 2 values. The first value sets the padding-top and padding-bottom values (5px), and the second value sets the padding-left and padding-right values (10px).
 
-### Margins
+## Margins
 
 Margins are space around the outside of the border
 
@@ -147,7 +147,7 @@ ie
     margin-right: 15px;
     }
 
-#### Margin Shorthand
+### Margin Shorthand
 
 4 Values
 
@@ -171,7 +171,7 @@ If the left and right sides of the content can be equal, the margin shorthand pr
 
 And finally, if the top and bottom sides can be equal, and the left and right sides can be equal, you can specify 2 values. The first value sets the margin-top and margin-bottom values (20px), and the second value sets the margin-left and margin-right values (10px).
 
-#### Margin Auto
+### Margin Auto
 
     div.headline {
     width: 400px;
@@ -181,7 +181,7 @@ And finally, if the top and bottom sides can be equal, and the left and right si
 set tops and bottom pargins to 0 pixels and tells browser to center left and right.
 A width must be set for the element or the element width (div) will automatically be set to width of containing element (body).
 
-#### Margin Collapse
+### Margin Collapse
 
 Horizontal margins (left and right), like padding, are always displayed and added together. For example, if two divs with ids #div-one and #div-two, are next to each other, they will be as far apart as the sum of their adjacent margins.
 
@@ -209,7 +209,7 @@ In this example, the vertical margin between the #img-one and #img-two elements 
 
 ![Vertical margin collapse example diagram](./diagram-verticalmargins_Updated_1-01.svg)
 
-### Minimum and Maximum Height and Width
+## Minimum and Maximum Height and Width
 
 - min-width: minimum width of elment's box
 - max-width: max width of element's box
@@ -228,7 +228,7 @@ ie
     max-height: 300px;
     }
 
-### Overflow
+## Overflow
 
 An element's size is the sum of its box model parts ie all vertical parts x all horizontal parts
 
@@ -247,7 +247,7 @@ ie
     overflow: scroll; 
     }
 
-### User Agent Stylesheets
+## User Agent Stylesheets
 
 user agent stylesheets are fallback used when external stylesheet is missing.
 These default padding and margin values can affect page display.
@@ -260,10 +260,52 @@ The defaults can be overridden with
 
 This is often the first CSS rule in an external stylesheet.
 
-### Visibility
+## Visibility
 
 3 options:
 
 - hidden -- hide the element
 - visible -- display the element
 - collapse -- collapse the element
+
+## Border Box
+
+ In CSS, the box-sizing property controls the type of box model the browser should use when interpreting a web page.
+
+    width + padding + border = actual render width of element's box
+
+### Box-sizing: border-box
+
+    * {
+      box-sizing: border-box;
+    }
+
+resets the box model to border-box for all html elements. box-border model avoids default dimensional issues.
+
+The height and width of the box remains fixed, meaning the border, thickness, and padding, will be included inside the box without counting toward the dimensions.
+
+    index.html:
+    <h1>Hello World</h1>
+
+    style.css:
+    * {
+    box-sizing: border-box;
+    }
+
+    h1 {
+    border: 1px dashed #4f768e;
+    height: 150px;
+    width: 200px;
+    padding: 20px;
+    }
+
+In the above, the final box dimensions remain 150 x 200 exactly.
+
+    width - border - padding = border-box width
+
+Summary:
+- In the default box model, box dimensions are affected by border thickness and padding.
+- The box-sizing property controls the box model used by the browser.
+- The default value of the box-sizing property is content-box.
+- The value for the new box model is border-box.
+- The border-box model is not affected by border thickness or padding.
