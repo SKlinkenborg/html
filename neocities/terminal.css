@@ -1,4 +1,7 @@
 /* all credit belongs to https://github.com/Gioni06/terminal.css/ for this layout! */
+
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Iceberg&family=Jacquard+12&family=Lexend+Zetta:wght@100..900&family=Sixtyfour+Convergence&family=Tiny5&display=swap');
+
 :root {
     --global-font-size: 15px;
     --global-line-height: 1.4em;
@@ -23,6 +26,7 @@
   * {
     box-sizing: border-box;
     text-rendering: geometricprecision;
+    font-family: "Sixtyfour Convergence";
   }
   
   *::selection {
@@ -34,7 +38,7 @@
     font-size: var(--global-font-size);
     color: var(--font-color);
     line-height: var(--global-line-height);
-    margin: 0;
+    /* margin: 0; */
     font-family: var(--font-stack);
     word-wrap: break-word;
     background-color: var(--background-color);
@@ -48,6 +52,9 @@
   h6,
   .logo {
     line-height: var(--global-line-height);
+    border: gray solid 8px;
+    border-radius: 8px;
+    padding: 0 20px;
   }
   
   a {
@@ -75,7 +82,7 @@
     line-height: var(--global-line-height);
   }
   
-  blockquote,
+  /* blockquote,
   code,
   footer,
   h1,
@@ -94,7 +101,7 @@
     float: none;
     margin: 0;
     padding: 0;
-  }
+  } */
   
   blockquote,
   h1,
